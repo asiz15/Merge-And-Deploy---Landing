@@ -65,14 +65,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 100);
       });
     } else if(path.href.slice(-1) === '7'){
-      var elements = document.getElementById("#contact");
-      elements.forEach(e => {
-        if(e.classList.contains('animate__fadeInUp')){
-          return
-        }else {
-          e.classList.toggle('animate__fadeInUp')
-        }    
-      });
+      
+      var elements = document.getElementById("contact");
+      if(elements.classList.contains('animate__fadeInUp')){
+        return
+      }else {
+        elements.classList.toggle('animate__fadeInUp')
+      }
+      console.log()
     }else if(path.href.slice(-1) === '0'){
       var elements = document.querySelectorAll(".cta");
       elements.forEach(e => {
