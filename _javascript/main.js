@@ -65,12 +65,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 100);
       });
     } else if(path.href.slice(-1) === '7'){
-      var elements = document.querySelectorAll("#contact");
+      var elements = document.getElementById("#contact");
       elements.forEach(e => {
-        e.classList.remove('animate__fadeInUp')
-        setTimeout(() => {
+        if(e.classList.contains('animate__fadeInUp')){
+          return
+        }else {
           e.classList.toggle('animate__fadeInUp')
-        }, 100);
+        }    
       });
     }else if(path.href.slice(-1) === '0'){
       var elements = document.querySelectorAll(".cta");
