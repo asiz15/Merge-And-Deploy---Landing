@@ -1,8 +1,42 @@
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('Hello Bulma!');
-  // document.querySelector('#btn-project1').addEventListener('click', function () {
-  //   console.log('open modal project')
-  // })
+  let width = document.body.clientWidth
+  if(width > 901){
+    const link = document.createElement('link')
+    link.rel = 'stylesheet'
+    link.href = 'css/full-page-scroll.css'
+    document.head.appendChild(link)
+    new fullScroll({
+      mainElement: 'main',
+      displayDots: true,
+      dotsPosition: 'left',
+      animateTime: 0.7,
+      animateFunction: 'ease'
+    });
+  }
+
+  // Get all "navbar-burger" elements
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  // Check if there are any navbar burgers
+  if ($navbarBurgers.length > 0) {
+
+    // Add a click event on each of them
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+
+        // Get the target from the "data-target" attribute
+        const $target = document.getElementById('navMenu');
+
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+
+
   window.addEventListener('popstate', function (event) {
     // Log the state data to the console
     let path = JSON.parse(JSON.stringify(window.location));
@@ -41,7 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }else if(path.href.slice(-1) === '0'){
       var elements = document.querySelectorAll(".cta");
       elements.forEach(e => {
-        e.classList.remove('animate__fadeInUp')
         setTimeout(() => {
           e.classList.toggle('animate__fadeInUp')
         }, 100);

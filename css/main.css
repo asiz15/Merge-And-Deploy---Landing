@@ -7142,7 +7142,8 @@ body {
 
 .button-primary {
   background-color: #426fd1;
-  color: #fff; }
+  color: #fff;
+  border: 1px solid #426fd1; }
   .button-primary:hover {
     background-color: #F4B41A !important;
     color: #426fd1;
@@ -7159,10 +7160,6 @@ body {
 
 .typewriter {
   color: #F4B41A !important; }
-
-.page-section {
-  width: 100vw;
-  height: 100vh; }
 
 .service-img {
   display: flex;
@@ -7190,34 +7187,62 @@ body {
   margin-top: 2%; }
 
 @media screen and (min-width: 200px) and (max-width: 800px) {
+  .myd-navbar {
+    position: fixed !important;
+    width: 100vw; }
+    .myd-navbar .burger {
+      margin-top: 4%; }
+  .btn-project {
+    display: none; }
+  .tech-icons {
+    margin-left: 10%;
+    margin-top: 5%; }
+  .reverse {
+    display: flex;
+    flex-direction: column-reverse; }
+  .likeCode-indent {
+    margin-left: 7%; }
   #hero-section {
+    width: 100vw;
+    height: 95vh;
     background-image: url("../assets/hero_image_desktop.svg");
     background-repeat: no-repeat;
     background-size: 300px;
     background-position: bottom right; }
     #hero-section .columns .cta {
       padding-top: 20%; }
+      #hero-section .columns .cta .button {
+        margin-left: 10%; }
+      #hero-section .columns .cta .title {
+        padding: 5% 7%;
+        font-size: 2.3em; }
       #hero-section .columns .cta .hero-desc {
         margin-top: 5%; }
   .page-section {
-    width: 100vw;
-    height: 100vh; }
+    width: 100vw; }
   #services {
-    padding-top: 7%; }
+    padding-top: 10%; }
     #services .title {
       margin-bottom: 10%; }
+    #services .card-column {
+      padding: 5%; }
   #about {
-    padding-top: 10%; }
+    padding: 15% 5% 30% 5%; }
+    #about .columns .about-img {
+      margin-top: 10%; }
+    #about .columns .column .title {
+      margin-bottom: 20%; }
   #tech {
-    padding-top: 10%; }
-    #tech .columns .desc {
-      padding-top: 5%; }
-      #tech .columns .desc .title {
-        margin-bottom: 10%; }
+    padding: 5%;
+    height: 100vh;
+    margin-bottom: 5%; }
+    #tech .columns .desc .title {
+      margin-bottom: 10%; }
   .portfolio {
-    padding-top: 5%; }
+    padding: 5%;
+    padding-top: 25%; }
     .portfolio .title {
-      margin-bottom: 3%; }
+      margin-bottom: 5%; }
     .portfolio .project .project-desc {
       display: flex;
       flex-direction: column;
@@ -7231,13 +7256,16 @@ body {
         background-color: #F4B41A;
         color: #E8E8E8; }
   #contact {
-    padding-top: 10%;
+    padding: 10% 5% 10% 5%;
     display: flex;
     flex-direction: column; }
     #contact .title {
       margin-bottom: 5%; } }
 
 @media screen and (min-width: 1024px) and (max-width: 1407px) {
+  .page-section {
+    width: 100vw;
+    height: 100vh; }
   .dots-left {
     left: 15px !important; }
   #hero-section {
@@ -7302,6 +7330,9 @@ body {
       margin-left: 5%; } }
 
 @media screen and (min-width: 1408px) {
+  .page-section {
+    width: 100vw;
+    height: 100vh; }
   #hero-section {
     background-image: url("../assets/hero_image_desktop.svg");
     background-repeat: no-repeat;
